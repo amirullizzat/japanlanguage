@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Registration</title>
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light gray background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            background: url('images/japan4.jpg') center/cover no-repeat;
+            padding: 100px 20px; /* Adjust padding as needed */
+        }
+
+        nav {
+            background-color: #c62828;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #c62828;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dropbtn:hover {
+            background-color: #000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #c62828;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #000;
+        }
+
+        section {
+            padding: 60px;
+        }
+		
+		.h-content {
+            background-color: #fff; /* White background for content */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden; /* Ensure the box shadow doesn't get cut off */
+            margin: 20px 0; /* Add some margin for spacing */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+        }
+
+        .h-content header {
+            background-color: #c62828;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #fff; /* White border at the bottom of the header */
+        }
+
+        .h-content article {
+            padding: 20px;
+        }
+
+        .h-image {
+            width: 100%; /* Make images responsive */
+            height: auto;
+            max-width: 600px; /* Set a max-width for larger screens */
+            display: block;
+            margin: 0 auto; /* Center images within their container */
+            border-radius: 8px; /* Rounded corners for images */
+            margin-bottom: 20px; /* Add spacing between images */
+        }	
+        .intro-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .intro-item {
+            flex: 0 1 calc(25% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .intro-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .intro-item p {
+            text-align: center;
+            margin: 10px 0 0;
+        }
+
+        .intro-item:hover {
+            transform: scale(1.1);
+        }
+
+        .intro-item:hover img {
+            transform: scale(1.2);
+        }
+		
+		form {
+            max-width: 450px;
+            margin: 60px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: justify;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #c62828;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Class Registration</h1>
+    </header>
+
+    <nav>
+       <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="history.html">History</a>
+        <a href="registration.html">Registration</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html">Contact</a>
+    </nav>
+
+    <form id="registrationForm" action="/submit_registration" method="post">
+	<h2>Free Japanese Language Classes!</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="button" onclick="validateAndRegister()">Register</button>
+		
+		
+        <p>Experience the joy of learning Japanese with our free online classes. Whether you're a beginner or looking to refine your language skills, our classes cater to all levels of learners. Take advantage of this opportunity to immerse yourself in the language without any cost.</p>
+        <p>Ready to start your language journey? Join our free classes now!</p>
+      
+
+    <p>Explore our sections, engage with interactive lessons, and immerse yourself in captivating visuals that showcase the essence of Japan. Whether you're here to enhance your language skills, discover the nuances of Japanese writing, or simply appreciate the cultural intricacies, Japanese Language Hub is your go-to destination.</p>
+
+    <p>Come join us on this cultural and linguistic odyssey. Let's unravel the mysteries and celebrate the wonders of the Japanese language together!</p>
+
+    </form>
+	
+        
+    <footer>
+        <p>&copy; 2023 Japanese Language Hub. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function validateAndRegister() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+
+            if (!name || !email || !phone) {
+                alert("Please fill out all required fields.");
+            } else {
+                alert("Registration successful! Welcome to our class.");
+            }
+        }
+    </script>
+
+</body>
+</html>

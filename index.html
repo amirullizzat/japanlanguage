@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Language Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAEBEB;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            overflow: hidden;
+            color: #fff;
+            text-align: center;
+            background: url('images/japan4.jpg') center/cover no-repeat;
+            padding: 100px 20px; /* Adjust padding as needed */
+        }
+	
+        nav {
+            background-color: #c62828;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: #c62828;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dropbtn:hover {
+            background-color: #000;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #c62828;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #000;
+        }
+
+        section {
+            padding: 60px;
+        }
+
+        .intro-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .intro-item {
+            flex: 0 1 calc(25% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .intro-item img {
+             width: 100%;
+			height: 200px; /* Adjust the height as needed */
+			object-fit: cover;
+			transition: transform 0.3s ease-in-out;
+        }
+
+        .intro-item p {
+            text-align: center;
+            margin: 10px 0 0;
+        }
+
+        .intro-item:hover {
+            transform: scale(1.1);
+        }
+
+        .intro-item:hover img {
+            transform: scale(1.2);
+        }
+
+        footer {
+            background-color: #c62828;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Japanese Language Hub</h1>
+        <p>Explore the beauty of the Japanese language and culture</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="history.html">History</a>
+        <a href="registration.html">Registration</a>
+		<a href="about.html">About Me</a>
+		<a href="contact.html">Contact</a>
+    </nav>
+
+    <section id="introduction">
+        <div class="intro-container">
+		<div class="intro-item" onclick="window.location.href='introduction.html'">
+                <img src="images/japan5.jpg" alt="Introduction">
+                <p>Introduction</p>
+            </div>
+		<div class="intro-item" onclick="window.location.href='history.html'">
+                <img src="images/japan4.jpg" alt="History of Japanese Language">
+                <p>History of Japanese Language</p>
+            </div>
+            <div class="intro-item" onclick="window.location.href='hiragana.html'">
+                <img src="images/japan1.jpg" alt="Hiragana">
+                <p>Hiragana</p>
+            </div>
+            <div class="intro-item" onclick="window.location.href='katakana.html'">
+                <img src="images/japan11.jpg" alt="Katakana">
+                <p>Katakana</p>
+            </div>
+            <div class="intro-item" onclick="window.location.href='kanji.html'">
+                <img src="images/japan2.jpg" alt="Kanji">
+                <p>Kanji</p>
+            </div>
+                     
+            <div class="intro-item" onclick="window.location.href='registration.html'">
+                <img src="images/japan6.jpg" alt="classes">
+                <p>Free Japanese Classes</p>
+            </div>
+            <div class="intro-item" onclick="window.location.href='culture.html'">
+                <img src="images/culture.png" alt="Culture">
+                <p>Culture</p>
+            </div>
+            <div class="intro-item" onclick="window.location.href='bon.html'">
+                <img src="images/odori.jpg" alt="Bon Odori">
+                <p>Bon Odori Festival</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ... (other sections) -->
+
+    <footer>
+        <p>&copy; 2023 Japanese Language Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
